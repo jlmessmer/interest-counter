@@ -42,9 +42,10 @@
         </paper-toolbar>
     <div class="content">
         <paper-material elevation="1">
-          <paper-input label="Your name here"></paper-input>
-          <paper-button raised>Say Hello</paper-button>
-          <div id="greeting"></div>
+          <form is="iron-form" id="form" method="post" action="/form/handler">
+            <paper-input name="name" label="name"></paper-input>
+            <input name="address">
+          </form>
         </paper-material>
         <paper-material elevation="1">
           <p class="paper-font-body2">This is another card.</p>
