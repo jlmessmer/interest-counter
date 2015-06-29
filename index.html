@@ -20,12 +20,13 @@
   </head>
   <body unresolved class="fullbleed layout vertical">
     <!-- 3. Declare the element. Configure using its attributes. -->
-    <paper-material elevation="1">
-      <paper-input label="Your name here"></paper-input>
-      <paper-button raised>Say Hello</paper-button>
-      <div id="greeting"></div>
-    </paper-material>
-
+    <div class="content">
+      <paper-material elevation="1">
+        <paper-input label="Your name here"></paper-input>
+        <paper-button raised>Say Hello</paper-button>
+        <div id="greeting"></div>
+      </paper-material>
+    </div>
     <script>
       // To ensure that elements are ready on polyfilled browsers,
       // wait for WebComponentsReady.
