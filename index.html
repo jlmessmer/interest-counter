@@ -20,6 +20,26 @@
   </head>
   <body unresolved class="fullbleed layout vertical">
     <!-- 3. Declare the element. Configure using its attributes. -->
+
+    <paper-header-panel main mode="waterfall-tall">
+
+      <!-- Main Toolbar -->
+      <paper-toolbar id="mainToolbar">
+        <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+        <span class="flex"></span>
+
+        <!-- Toolbar icons -->
+        <paper-icon-button icon="refresh"></paper-icon-button>
+        <paper-icon-button icon="search"></paper-icon-button>
+
+        <!-- Application name -->
+        <div class="middle paper-font-display2 app-name">Interest Counter</div>
+
+        <!-- Application sub title -->
+        <div class="bottom title"></div>
+
+      </paper-toolbar>
+
     <div class="content">
       <paper-material elevation="1">
         <paper-input label="Your name here"></paper-input>
