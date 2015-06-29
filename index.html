@@ -46,7 +46,7 @@
       <paper-toolbar id="mainToolbar">
 
         <!-- Application name -->
-        <div class="middle paper-font-display2 app-name">Polymer Starter Kit</div>
+        <div class="middle paper-font-display2 app-name">Interest Counter</div>
 
         <!-- Application sub title -->
         <div class="bottom title"></div>
@@ -58,21 +58,11 @@
           <paper-button raised>Say Hello</paper-button>
           <div id="greeting"></div>
         </paper-material>
+        <paper-material elevation="1">
+          <p class="paper-font-body2">This is another card.</p>
+        </paper-material>
     </div>
   </paper-header-panel>
   <script src="scripts/app.js"></script>
-
-    <script>
-      // To ensure that elements are ready on polyfilled browsers,
-      // wait for WebComponentsReady.
-      document.addEventListener('WebComponentsReady', function() {
-        var input = document.querySelector('paper-input');
-        var button = document.querySelector('paper-button');
-        var greeting = document.getElementById("greeting");
-        button.addEventListener('click', function() {
-          greeting.textContent = 'Hello, ' + input.value;
-        });
-      });
-    </script>
   </body>
 </html>
