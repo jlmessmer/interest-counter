@@ -25,16 +25,21 @@
     <paper-header-panel main mode="waterfall-tall">
       <span class="flex"></span>
 
-      <!-- Main Toolbar -->
       <paper-toolbar id="mainToolbar">
+          <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+          <span class="flex"></span>
 
-        <!-- Application name -->
-        <div class="middle paper-font-display2 app-name">Interest Counter</div>
+          <!-- Toolbar icons -->
+          <paper-icon-button icon="refresh"></paper-icon-button>
+          <paper-icon-button icon="search"></paper-icon-button>
 
-        <!-- Application sub title -->
-        <div class="bottom title"></div>
+          <!-- Application name -->
+          <div class="middle paper-font-display2 app-name">Polymer Starter Kit</div>
 
-      </paper-toolbar>
+          <!-- Application sub title -->
+          <div class="bottom title"></div>
+
+        </paper-toolbar>
     <div class="content">
         <paper-material elevation="1">
           <paper-input label="Your name here"></paper-input>
