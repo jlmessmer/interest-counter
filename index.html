@@ -1,58 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Polymer Starter Kit" />
+<head>
 
-    <link rel="stylesheet" href="styles/main.css">
+  <title>Left Nav + Cards</title>
 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
 
-    <!-- 1. Load webcomponents-lite.min.js for polyfill support. -->
-    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js">
-    </script>
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="src/x-app.html">
 
-    <link rel="import" href="elements/elements.html">
+  <style>
 
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
 
+  </style>
 
-  </head>
-  <body unresolved class="fullbleed layout vertical">
-    <span id="browser-sync-binding"></span>
-    <template is="dom-bind" id="app">
-    <!-- 3. Declare the element. Configure using its attributes. -->
-    <paper-header-panel main mode="waterfall-tall">
-      <span class="flex"></span>
+</head>
+<body>
 
-      <paper-toolbar id="mainToolbar">
-          <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-          <span class="flex"></span>
+  <x-app></x-app>
 
-          <!-- Toolbar icons -->
-          <paper-icon-button icon="refresh"></paper-icon-button>
-          <paper-icon-button icon="search"></paper-icon-button>
-
-          <!-- Application name -->
-          <div class="middle paper-font-display2 app-name">Polymer Starter Kit</div>
-
-          <!-- Application sub title -->
-          <div class="bottom title"></div>
-
-        </paper-toolbar>
-    <div class="content">
-        <paper-material elevation="1">
-          <form is="iron-form" id="form" method="post" action="/form/handler">
-            <paper-input name="principal" label="Principal"></paper-input>
-            <paper-input name="rate" label="Rate (as a decimal)"></paper-input>
-            <paper-button raised id="start-count">Start Counting!</paper-button>
-          </form>
-        </paper-material>
-        <paper-material elevation="1">
-          <p class="paper-font-body2">This is another card.</p>
-        </paper-material>
-    </div>
-  </paper-header-panel>
-  <script src="scripts/app.js"></script>
-  </body>
+</body>
 </html>
