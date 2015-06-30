@@ -40,6 +40,6 @@ paper-input {
 }
 
 paper-button {
-  padding: 32px;
-  padding-top: 0px;
+  margin: 32px;
+  margin-top: 0px;
 }
