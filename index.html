@@ -21,6 +21,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script src="webcomponentsjs/webcomponents-lite.js"></script>
   <link rel="import" href="src/x-app.html">
 
+    <link rel="import" type="css" href="x-app.css">
+
+    <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="../bower_components/iron-form/iron-form.html">
+    <link rel="import" href="../bower_components/iron-input/iron-input.html">
+    <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+
+    <link rel="import" href="../bower_components/paper-button/paper-button.html">
+    <link rel="import" href="../bower_components/paper-drawer-panel/paper-drawer-panel.html">
+    <link rel="import" href="../bower_components/paper-header-panel/paper-header-panel.html">
+    <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="../bower_components/paper-input/paper-input.html">
+    <link rel="import" href="../bower_components/paper-item/paper-item.html">
+    <link rel="import" href="../bower_components/paper-material/paper-material.html">
+    <link rel="import" href="../bower_components/paper-material/paper-menu.html">
+    <link rel="import" href="../bower_components/paper-styles/paper-styles-classes.html">
+    <link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
+
+    <link rel="import" href="routing.html">
+
   <link rel="stylesheet" href="flipclock/flipclock.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="flipclock/flipclock.min.js"></script>
@@ -36,7 +56,65 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </head>
 <body>
 
-  <x-app></x-app>
+  <paper-drawer-panel id="drawerPanel" responsive-width="1280px">
 
+    <div class="nav" drawer>
+
+    </div>
+
+    <paper-header-panel class="main" main mode="waterfall">
+      <!-- Main Toolbar -->
+      <paper-toolbar>
+        <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+        <div class="middle paper-font-display2 app-name">Interest Counter</div>
+      </paper-toolbar>
+
+      <!-- Main Content -->
+      <div class="content">
+            <paper-material>
+                <h3>Interest Information</h3>
+                <paper-input is="iron-input" auto-validate pattern="[0-9]*" error-message="Numbers Only" name="principal" label="Principal"></paper-input>
+                <paper-input is="iron-input" auto-validate pattern="[0-9]*" error-message="Numbers Only" name="rate" label="Rate"></paper-input>
+                <paper-button raised>See Counter!</paper-button>
+            </paper-material>
+            <paper-material>
+                <div class="clock" style="margin:2em"></div>
+            </paper-material>
+    </div>
+
+    </paper-header-panel>
+
+  </paper-drawer-panel>
+  <script>
+
+    Polymer({
+
+      is: 'x-app'
+
+    });
+
+  </script>
+  <script type="text/javascript">
+    var clock;
+    var principal = 10000000;
+    var nextIteration = principal;
+    var rate = 0.06;
+    $(document).ready(function(){
+      clock = new FlipClock($(".clock"), principal, {
+        clockFace: 'Counter'
+      })
+    })
+    setInterval(function() {
+        nextIteration = Math.round(principal *(1 + (rate/31536000)))
+        var difference = nextIteration - principal
+        console.log("Principal: " + principal + "\nNext Iteration: " + nextIteration + "\nDifference: " + difference)
+        for(i = 0; i < difference - 1; i++){
+          clock.increment();
+        }
+        setInterval(function(){}, 500)
+        clock.increment();
+        principal = nextIteration
+    }, 500);
+  </script>
 </body>
 </html>
