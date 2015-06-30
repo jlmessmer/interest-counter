@@ -24,6 +24,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/paper-styles/paper-styles-classes.html">
 <link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
 
+<link rel="import" href="routing.html">
+
 <!--
 
 Left Nav + Cards
@@ -62,20 +64,20 @@ Left Nav + Cards
         <div class="content">
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
             <section data-route="home">
-          <paper-material>
-              <h3>Interest Information</h3>
-              <paper-input is="iron-input" auto-validate pattern="[0-9]*" error-message="Numbers Only" name="principal" label="Principal"></paper-input>
-              <paper-input is="iron-input" auto-validate pattern="[0-9]*" error-message="Numbers Only" name="rate" label="Rate"></paper-input>
-              <paper-button raised>See Counter!</paper-button>
-          </paper-material>
-        </section>
-        <section data-route="Users">
-          <paper-material>
-            <p class="paper-font-body2">Testing</p>
-          </paper-material>
-        </section>
+              <paper-material>
+                  <h3>Interest Information</h3>
+                  <paper-input is="iron-input" auto-validate pattern="[0-9]*" error-message="Numbers Only" name="principal" label="Principal"></paper-input>
+                  <paper-input is="iron-input" auto-validate pattern="[0-9]*" error-message="Numbers Only" name="rate" label="Rate"></paper-input>
+                  <paper-button raised>See Counter!</paper-button>
+              </paper-material>
+            </section>
+            <section data-route="Users">
+              <paper-material>
+                <p class="paper-font-body2">Testing</p>
+              </paper-material>
+            </section>
         </iron-pages>
-        </div>
+      </div>
 
       </paper-header-panel>
 
