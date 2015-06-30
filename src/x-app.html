@@ -42,7 +42,13 @@ Left Nav + Cards
 
         <!-- Main Content -->
         <div class="content">
-          <paper-material></paper-material>
+          <paper-material>
+            <form is="iron-form" id="form" method="post" action="/form/handler">
+              <paper-input name="principal" label="Principal"></paper-input>
+              <paper-input name="rate" label="Rate"></paper-input>
+              <paper-button raised>See Counter!</paper-button>
+            </form>
+          </paper-material>
           <paper-material></paper-material>
           <paper-material></paper-material>
           <paper-material></paper-material>
