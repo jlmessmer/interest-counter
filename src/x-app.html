@@ -11,6 +11,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
 
 <link rel="import" href="../bower_components/iron-form/iron-form.html">
+<link rel="import" href="../bower_components/iron-input/iron-input.html">
 
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../bower_components/paper-drawer-panel/paper-drawer-panel.html">
@@ -47,8 +48,8 @@ Left Nav + Cards
         <!-- Main Content -->
         <div class="content">
           <paper-material>
-              <paper-input name="principal" label="Principal"></paper-input>
-              <paper-input name="rate" label="Rate"></paper-input>
+              <paper-input is="iron-input" auto-validate pattern="[0-9]" name="principal" label="Principal"></paper-input>
+              <paper-input is="iron-input" auto-validate pattern="[0-9]" name="rate" label="Rate"></paper-input>
               <paper-button raised>See Counter!</paper-button>
           </paper-material>
           <paper-material>
