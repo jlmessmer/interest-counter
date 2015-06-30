@@ -39,6 +39,10 @@ Left Nav + Cards
 
     <paper-drawer-panel id="drawerPanel" responsive-width="1280px">
 
+      <div class="nav" drawer>
+
+      </div>
+
       <paper-header-panel class="main" main mode="waterfall">
         <!-- Main Toolbar -->
         <paper-toolbar>
@@ -48,16 +52,12 @@ Left Nav + Cards
 
         <!-- Main Content -->
         <div class="content">
-          <iron-pages attr-for-selected="data-route" selected="{{route}}">
-            <section data-route="home">
               <paper-material>
                   <h3>Interest Information</h3>
                   <paper-input is="iron-input" auto-validate pattern="[0-9]*" error-message="Numbers Only" name="principal" label="Principal"></paper-input>
                   <paper-input is="iron-input" auto-validate pattern="[0-9]*" error-message="Numbers Only" name="rate" label="Rate"></paper-input>
                   <paper-button raised>See Counter!</paper-button>
               </paper-material>
-            </section>
-            <section data-route="Users">
               <paper-material>
                 <p class="paper-font-body2">Testing</p>
               </paper-material>
