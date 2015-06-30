@@ -20,7 +20,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 }
 
 paper-toolbar {
-  background-color: #42A5F5;
+  background-color: #43A047;
 }
 
 .content {
@@ -28,9 +28,18 @@ paper-toolbar {
 }
 
 paper-material {
-  height: auto;
+  height: 400px;
   max-width: 640px;
   margin: 16px auto;
-  padding: 16px auto;
   background-color: #fff;
+}
+
+paper-input {
+  padding: 32px;
+  padding-top: 0px;
+}
+
+paper-button {
+  padding: 32px;
+  padding-top: 0px;
 }
