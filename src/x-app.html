@@ -56,7 +56,7 @@ Left Nav + Cards
                   <h3>Interest Information</h3>
                   <paper-input is="iron-input" auto-validate pattern="[0-9]*" error-message="Numbers Only" id="principal" class="principal" label="Principal"></paper-input>
                   <paper-input is="iron-input" auto-validate pattern="[0-9]*" error-message="Numbers Only" id="rate" class="rate" label="Rate"></paper-input>
-                  <paper-button raised>See Counter!</paper-button>
+                  <paper-button raised id="start">See Counter!</paper-button>
               </paper-material>
               <paper-material>
                   <div class="clock" style="margin:2em"></div>
@@ -72,7 +72,10 @@ Left Nav + Cards
       var principal = 10000000.00;
       var number = $("#principal").val();
       var rate = $("#principal").val();
-      console.log("Number: " + number + "\nRate: " + rate);
+
+      $("#start").click(function(){
+        console.log("Number: " + number + "\nRate: " + rate);
+      });
       var nextIteration = principal;
       var rate = 0.06;
       $(document).ready(function(){
