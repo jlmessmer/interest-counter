@@ -69,15 +69,16 @@ Left Nav + Cards
 
     <script type="text/javascript">
       var clock;
-
+      var interval;
       $("#start").click(function(){
+        clearInterval(interval);
         var principal = parseFloat($("#principal").val());
         var rate = parseFloat($("#rate").val() / 100);
         console.log("Principal: " + principal + "\nRate: " + rate);
 
         nextIteration = principal;
 
-        setInterval(function() {
+        interval = setInterval(function() {
             nextIteration = principal *(1 + (rate/31536000))
             var difference = nextIteration - principal
             console.log("Principal: " + principal + "\nNext Iteration: " + nextIteration + "\nDifference: " + difference)
