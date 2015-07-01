@@ -79,7 +79,9 @@ Left Nav + Cards
         console.log("Principal: " + principal + "\nRate: " + rate);
 
         nextIteration = principal;
-
+        clock = new FlipClock($(".clock"), principal, {
+          clockFace: 'Counter'
+        })
         interval = setInterval(function() {
             nextIteration = principal *(1 + (rate/31536000))
             var difference = nextIteration - principal
@@ -90,11 +92,11 @@ Left Nav + Cards
             principal = nextIteration
         }, 1000);
       });
-      $(document).ready(function(){
+      /*$(document).ready(function(){
               clock = new FlipClock($(".clock"), principal, {
                 clockFace: 'Counter'
               })
-      });
+      });*/
     </script>
   </template>
 
