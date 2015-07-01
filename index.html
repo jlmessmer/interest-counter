@@ -38,7 +38,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <x-app>
   <script type="text/javascript">
     var clock;
-    var principal = 10000000;
+    var principal = 10000000.00;
     var number = $("#principal").val();
     var rate = $("#principal").val();
     console.log("Number: " + number + "\nRate: " + rate);
@@ -50,7 +50,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       })
     })
     setInterval(function() {
-        nextIteration = Math.round(principal *(1 + (rate/31536000)))
+        nextIteration = principal *(1 + (rate/31536000))
         var difference = nextIteration - principal
         //console.log("Principal: " + principal + "\nNext Iteration: " + nextIteration + "\nDifference: " + difference)
         for(i = 0; i < difference - 1; i++){
