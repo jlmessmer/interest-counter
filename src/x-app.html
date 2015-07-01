@@ -69,31 +69,29 @@ Left Nav + Cards
 
     <script type="text/javascript">
       var clock;
-      var principal = 10000000.00;
 
       $("#start").click(function(){
-        var number = parseFloat($("#principal").val());
-        var rateInput = parseFloat($("#rate").val() / 100);
-        console.log("Number: " + number + "\nRate: " + rateInput);
+        var principal = parseFloat($("#principal").val());
+        var rate = parseFloat($("#rate").val() / 100);
+        console.log("Principal: " + principal + "\nRate: " + rate);
+
+        nextIteration = principal;
+
+        setInterval(function() {
+            nextIteration = principal *(1 + (rate/31536000))
+            var difference = nextIteration - principal
+            console.log("Principal: " + principal + "\nNext Iteration: " + nextIteration + "\nDifference: " + difference)
+            for(i = 0; i < difference; i++){
+              clock.increment();
+            }
+            principal = nextIteration
+        }, 1000);
       });
-      var nextIteration = principal;
-      var rate = 0.06;
       $(document).ready(function(){
         clock = new FlipClock($(".clock"), principal, {
           clockFace: 'Counter'
         })
       })
-      setInterval(function() {
-          nextIteration = principal *(1 + (rate/31536000))
-          var difference = nextIteration - principal
-          //console.log("Principal: " + principal + "\nNext Iteration: " + nextIteration + "\nDifference: " + difference)
-          for(i = 0; i < difference - 1; i++){
-            clock.increment();
-          }
-          setInterval(function(){}, 500)
-          clock.increment();
-          principal = nextIteration
-      }, 500);
     </script>
   </template>
 
