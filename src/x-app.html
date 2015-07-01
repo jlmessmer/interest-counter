@@ -70,11 +70,11 @@ Left Nav + Cards
     <script type="text/javascript">
       var clock;
       var principal = 10000000.00;
-      var number = $("#principal").val();
-      var rate = $("#principal").val();
 
       $("#start").click(function(){
-        console.log("Number: " + number + "\nRate: " + rate);
+      var number = $("#principal").val();
+      var rateInput = $("#principal").val();
+        console.log("Number: " + number + "\nRate: " + rateInput);
       });
       var nextIteration = principal;
       var rate = 0.06;
