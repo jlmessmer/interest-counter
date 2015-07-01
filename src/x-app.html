@@ -72,8 +72,8 @@ Left Nav + Cards
       var principal = 10000000.00;
 
       $("#start").click(function(){
-        var number = $("#principal").val();
-        var rateInput = $("#rate").val(); / 100
+        var number = parseFloat($("#principal").val());
+        var rateInput = parseFloat($("#rate").val() / 100);
         console.log("Number: " + number + "\nRate: " + rateInput);
       });
       var nextIteration = principal;
