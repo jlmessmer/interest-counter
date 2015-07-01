@@ -85,7 +85,7 @@ Left Nav + Cards
         interval = setInterval(function() {
             nextIteration = principal *(1 + (rate/31536000))
             var difference = (nextIteration - principal).toFixed(2);
-            console.log("Difference: " + difference);
+            console.log("Difference: " + difference + "\nExactDifference: " + (nextIteration-principal));
             //console.log("Principal: " + principal + "\nNext Iteration: " + nextIteration + "\nDifference: " + difference)
             for(i = 0; i < difference; i++){
               clock.increment();
