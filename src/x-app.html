@@ -69,7 +69,11 @@ Left Nav + Cards
 
     <script type="text/javascript">
       var clock;
-
+      $(document).ready(function(){
+        clock = new FlipClock($(".clock"), principal, {
+          clockFace: 'Counter'
+        })
+      })
       $("#start").click(function(){
         var principal = parseFloat($("#principal").val());
         var rate = parseFloat($("#rate").val() / 100);
@@ -87,11 +91,6 @@ Left Nav + Cards
             principal = nextIteration
         }, 1000);
       });
-      $(document).ready(function(){
-        clock = new FlipClock($(".clock"), principal, {
-          clockFace: 'Counter'
-        })
-      })
     </script>
   </template>
 
