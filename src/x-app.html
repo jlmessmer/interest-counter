@@ -69,7 +69,10 @@ Left Nav + Cards
 
     <script type="text/javascript">
       var clock;
-      var principal = 10000000;
+      var principal = 10000000.00;
+      var number = $("#principal").val();
+      var rate = $("#principal").val();
+      console.log("Number: " + number + "\nRate: " + rate);
       var nextIteration = principal;
       var rate = 0.06;
       $(document).ready(function(){
@@ -78,9 +81,9 @@ Left Nav + Cards
         })
       })
       setInterval(function() {
-          nextIteration = Math.round(principal *(1 + (rate/31536000)))
+          nextIteration = principal *(1 + (rate/31536000))
           var difference = nextIteration - principal
-          console.log("Principal: " + principal + "\nNext Iteration: " + nextIteration + "\nDifference: " + difference)
+          //console.log("Principal: " + principal + "\nNext Iteration: " + nextIteration + "\nDifference: " + difference)
           for(i = 0; i < difference - 1; i++){
             clock.increment();
           }
