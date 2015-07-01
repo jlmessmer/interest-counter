@@ -87,8 +87,8 @@ Left Nav + Cards
             nextIteration = principal *(1 + (rate/31536000))
             var difference = (nextIteration - principal)
             //console.log("Difference: " + difference + "\nExactDifference: " + (nextIteration-principal));
-            console.log("Principal: " + principal + "\nNext Iteration: " + nextIteration + "\nDifference: " + difference)
             totalGain += difference;
+            console.log("Principal: " + principal + "\nNext Iteration: " + nextIteration + "\nTotal Gain: " + totalGain)
             if (totalGain >= 1){
               clock.increment();
               totalgGain--;
