@@ -73,6 +73,7 @@ Left Nav + Cards
       var principal;
       var rate;
       $("#start").click(function(){
+        var totalGain = 0;
         clearInterval(interval);
         principal = parseFloat($("#principal").val());
         rate = parseFloat($("#rate").val() / 100);
@@ -87,8 +88,10 @@ Left Nav + Cards
             var difference = (nextIteration - principal)
             //console.log("Difference: " + difference + "\nExactDifference: " + (nextIteration-principal));
             console.log("Principal: " + principal + "\nNext Iteration: " + nextIteration + "\nDifference: " + difference)
-            for(i = 0; i < difference; i++){
+            totalGain += difference;
+            if (totalGain >= 1){}
               clock.increment();
+              totalgGain--;
             }
             principal = nextIteration
         }, 1000);
